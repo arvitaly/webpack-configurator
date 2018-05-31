@@ -1,0 +1,47 @@
+{
+  "name": "webpack-ide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc && tslint --project=tsconfig.json && jest --verbose --coverage",
+    "watch:test": "jest --watch",
+    "build": "webpack --mode=production",
+    "dev": "webpack-dev-server --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arvitaly/webpack-ide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arvitaly/webpack-ide/issues"
+  },
+  "homepage": "https://github.com/arvitaly/webpack-ide#readme",
+  "jest": {},
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "coveralls": "^3.0.1",
+    "jest": "^23.1.0",
+    "tslint": "^5.10.0",
+    "typescript": "^2.8.4",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "@types/highlight.js": "^9.12.3",
+    "@types/marked": "^0.3.0",
+    "@types/node": "^10.1.4",
+    "@types/showdown": "^1.7.3",
+    "@types/webpack": "^4.4.0",
+    "highlight.js": "^9.12.0",
+    "html-loader": "^0.5.5",
+    "marked": "^0.4.0",
+    "neweb-components": "^0.13.3",
+    "rxjs": "^6.2.0",
+    "showdown": "^1.8.6"
+  }
+}
