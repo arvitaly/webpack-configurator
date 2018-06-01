@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tsc && tslint --project=tsconfig.json && jest --verbose --coverage",
+    "test": "tsc && tslint --project tsconfig.json && jest --verbose --coverage",
     "watch:test": "jest --watch",
-    "build": "webpack --mode=production",
+    "build": "tsc && webpack --mode=production",
     "dev": "webpack-dev-server --mode=development"
   },
   "repository": {
