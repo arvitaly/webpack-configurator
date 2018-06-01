@@ -1,8 +1,10 @@
-import highlight = require("highlight.js");
+import highlight = require("highlight.js/lib/highlight");
+import javascript = require("highlight.js/lib/languages/javascript");
 import marked = require("marked");
 import { Component, ElementComponent } from "neweb-components";
-import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
+import { Observable } from "rxjs/Observable";
+import { map } from "rxjs/operators/map";
+highlight.registerLanguage("javascript", javascript);
 class VisionComponent extends Component<{
     content: Observable<string>;
 }> {
@@ -14,7 +16,7 @@ class VisionComponent extends Component<{
             },
         });
         this.addElement("content", new ElementComponent({
-            innerHTML: this.props.content.pipe(map((value) => marked("```typescript\n" + value + "\n```"))),
+            innerHTML: this.props.content.pipe(map((value) => marked("```javascript\n" + value + "\n```"))),
         }));
     }
     getTemplate() {

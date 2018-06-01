@@ -1,5 +1,5 @@
 import { Component } from "neweb-components";
-import { BehaviorSubject } from "rxjs";
+import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import ConfigContentGenerator from "../services/ConfigContentGenerator";
 import EditorComponent, { IEditorConfig } from "./Editor";
 import VisionComponent from "./Vision";

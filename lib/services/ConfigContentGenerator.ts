@@ -1,5 +1,5 @@
-import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
+import { Observable } from "rxjs/Observable";
+import { map } from "rxjs/operators/map";
 import { IEditorConfig } from "../components/Editor";
 import { observableFromTemplateStrings } from "../util";
 

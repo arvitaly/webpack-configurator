@@ -1,5 +1,5 @@
 import { BooleanInputComponent, Component, InputComponent } from "neweb-components";
-import { Subject } from "rxjs";
+import { Subject } from "rxjs/Subject";
 export interface IEditorConfig {
     entry: Subject<string>;
     outputDir: Subject<string>;
