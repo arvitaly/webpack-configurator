@@ -4602,9 +4602,9 @@ neo-async@^2.5.0:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.5.1.tgz#acb909e327b1e87ec9ef15f41b8a269512ad41ee"
 
-neweb-components@^0.13.3:
-  version "0.13.3"
-  resolved "https://registry.yarnpkg.com/neweb-components/-/neweb-components-0.13.3.tgz#912d4fff3968c94cd64946faa685ccfb1137338c"
+neweb-components@^0.13.6:
+  version "0.13.6"
+  resolved "https://registry.yarnpkg.com/neweb-components/-/neweb-components-0.13.6.tgz#9a9c2189a4ab6f1402c44ab566b6a8f6977f4681"
   dependencies:
     morphdom "^2.3.3"
 

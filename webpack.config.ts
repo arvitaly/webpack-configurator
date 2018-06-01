@@ -1,7 +1,7 @@
 // tslint:disable-next-line:no-implicit-dependencies
 import webpack = require("webpack");
 const config: webpack.Configuration = {
-    entry: __dirname + "/index.js",
+    entry: __dirname + "/lib/index.js",
     output: {
         path: __dirname,
         filename: "bundle.js",

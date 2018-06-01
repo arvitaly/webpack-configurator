@@ -1,6 +1,6 @@
 "use strict";
 const config = {
-    entry: __dirname + "/index.js",
+    entry: __dirname + "/lib/index.js",
     output: {
         path: __dirname,
         filename: "bundle.js",

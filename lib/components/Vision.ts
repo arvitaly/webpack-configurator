@@ -1,5 +1,5 @@
 import highlight = require("highlight.js");
-import marked = require('marked');
+import marked = require("marked");
 import { Component, ElementComponent } from "neweb-components";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
