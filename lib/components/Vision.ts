@@ -2,8 +2,8 @@ import highlight = require("highlight.js/lib/highlight");
 import javascript = require("highlight.js/lib/languages/javascript");
 import marked = require("marked");
 import { Component, ElementComponent } from "neweb-components";
-import { Observable } from "rxjs/Observable";
-import { map } from "rxjs/operators/map";
+import { Observable } from "rxjs";
+import { map } from "rxjs/operators";
 highlight.registerLanguage("javascript", javascript);
 class VisionComponent extends Component<{
     content: Observable<string>;

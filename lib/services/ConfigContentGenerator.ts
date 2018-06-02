@@ -1,19 +1,21 @@
-import { Observable } from "rxjs/Observable";
-import { map } from "rxjs/operators/map";
+import { Observable, of } from "rxjs";
+import { map, switchMap } from "rxjs/operators";
 import { IEditorConfig } from "../components/Editor";
-import { observableFromTemplateStrings } from "../util";
+import { observableFromTemplateStrings as t } from "../util";
 
 class ConfigContentGenerator {
     public content: Observable<string>;
     constructor(protected editorData: IEditorConfig) {
-        this.content = observableFromTemplateStrings`
+        this.content = t`
 export = {
     entry: __dirname + "/${editorData.entry}",
     output: {
         path: __dirname + "/${editorData.outputDir}",
         filename: "${editorData.outputFileName}",
     },
-    module: {
+    ${editorData.devServer.enabled.pipe(switchMap((v) => v ? t`devServer: {
+        contentBase: __dirname + "${editorData.devServer.contentBase}",
+    }, ` : of("")))}module: {
         rules :[${editorData.plugins.htmlLoader.pipe(map((v) => v ? `{
             test: /\.(html)$/,
             use: ["html-loader"],

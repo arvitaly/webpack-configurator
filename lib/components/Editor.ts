@@ -1,11 +1,15 @@
 import { BooleanInputComponent, Component, InputComponent } from "neweb-components";
-import { Subject } from "rxjs/Subject";
+import { Subject } from "rxjs";
 export interface IEditorConfig {
     entry: Subject<string>;
     outputDir: Subject<string>;
     outputFileName: Subject<string>;
     plugins: {
         htmlLoader: Subject<boolean>;
+    };
+    devServer: {
+        enabled: Subject<boolean>;
+        contentBase: Subject<string>;
     };
 }
 class EditorComponent extends Component<{
@@ -23,6 +27,12 @@ class EditorComponent extends Component<{
         }));
         this.addElement("inputPluginHtmlLoader", new BooleanInputComponent({
             value: this.props.data.plugins.htmlLoader,
+        }));
+        this.addElement("enableDevServer", new BooleanInputComponent({
+            value: this.props.data.devServer.enabled,
+        }));
+        this.addElement("txtDevServerContentBase", new InputComponent({
+            value: this.props.data.devServer.contentBase,
         }));
     }
     getTemplate() {

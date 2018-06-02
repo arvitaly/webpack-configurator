@@ -1,5 +1,4 @@
-// tslint:disable no-var-requires no-implicit-dependencies
-const WebpackMonitor = require("webpack-monitor");
+// tslint:disable no-implicit-dependencies
 import webpack = require("webpack");
 const config: webpack.Configuration = {
     entry: __dirname + "/lib/index.js",
@@ -16,13 +15,5 @@ const config: webpack.Configuration = {
             use: ["html-loader"],
         }],
     },
-    plugins: [
-        new WebpackMonitor({
-            capture: true, // -> default 'true'
-            launch: true, // -> default 'false'
-            port: 3030, // default -> 8081
-            excludeSourceMaps: true, // default 'true'
-        }),
-    ],
 };
 export = config;

@@ -1,5 +1,5 @@
 import { Component } from "neweb-components";
-import { BehaviorSubject } from "rxjs/BehaviorSubject";
+import { BehaviorSubject } from "rxjs";
 import ConfigContentGenerator from "../services/ConfigContentGenerator";
 import EditorComponent, { IEditorConfig } from "./Editor";
 import VisionComponent from "./Vision";
@@ -10,6 +10,10 @@ class App extends Component<{}> {
         outputFileName: new BehaviorSubject("bundle.js"),
         plugins: {
             htmlLoader: new BehaviorSubject(false),
+        },
+        devServer: {
+            enabled: new BehaviorSubject(true),
+            contentBase: new BehaviorSubject(""),
         },
     };
     configCode = new BehaviorSubject<string>("");

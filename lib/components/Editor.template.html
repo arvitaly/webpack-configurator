@@ -1,11 +1,7 @@
 <style>
-    .editor {}
-
     .editor .form {
         display: "grid";
     }
-
-    .editor .form .label {}
 </style>
 <div class="editor">
     <h1>Editor</h1>
@@ -24,6 +20,11 @@
             </div>
         </div>
         <div>Plugins</div>
-        <input name="inputPluginHtmlLoader" value="1" type="checkbox" id="html-loader" /><label for="html-loader">Html-loader</label>
+        <input name="inputPluginHtmlLoader" value="1" type="checkbox" id="html-loader" />
+        <label for="html-loader">Html-loader</label>
+        <div>Dev server</div>
+        <label for="enableDevServer">Enabled</label>
+        <input name="enableDevServer" type="checkbox" id="enableDevServer" />
+        <div>Content base: <input name="txtDevServerContentBase" type="text" /></div>
     </div>
 </div>
